@@ -54,10 +54,6 @@ const RangeSelector: React.FC<Props> = ({
   const sliderWidth = useSharedValue(tabWidth);
 
   useEffect(() => {
-    sliderWidth.value = tabWidth;
-  }, [sliderWidth, tabWidth]);
-
-  useEffect(() => {
     sliderX.value = range[0] * tabWidth;
     sliderWidth.value = (range[1] - range[0] + 1) * tabWidth;
   }, [range, sliderWidth, sliderX, tabWidth]);
