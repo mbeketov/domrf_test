@@ -50,7 +50,7 @@ const RangeSelector: React.FC<Props> = ({
   const [range, setRange] = useState<number[]>(initialMonths);
   const tabsWidth = tabWidth * 12;
 
-  const sliderX = useSharedValue(tabWidth);
+  const sliderX = useSharedValue(0);
   const sliderWidth = useSharedValue(tabWidth);
 
   useEffect(() => {
