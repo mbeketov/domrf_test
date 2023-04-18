@@ -9,10 +9,7 @@ export function selectPeriod(startMonth: number, endMonth: number): string {
   if (startMonth === 0 && endMonth === 11) {
     return PERIOD_YEAR;
   }
-  if (
-    quarterStartMonths.indexOf(startMonth) !== -1 &&
-    endMonth - startMonth === 2
-  ) {
+  if (quarterStartMonths.includes(startMonth) && endMonth - startMonth === 2) {
     return PERIOD_QUARTER;
   }
   return PERIOD_MOTHS;
